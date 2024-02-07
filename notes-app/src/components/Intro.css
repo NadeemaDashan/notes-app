@@ -1,17 +1,17 @@
 .intro{
-    background-color: rgb(30, 30, 30);
     color: white;
     padding: 10%;
     border-radius: 28px;
-
+    background-color: rgb(30, 30, 30);
 
 }
 
 main{
-    height: 50vw;
+    height: 55.6vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .btn-intro{

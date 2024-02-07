@@ -6,18 +6,23 @@ import Intro from './components/Intro'
 import Sidebar from './components/SideBar'
 
 function App() {
-  const [count, setCount] = useState(false)
+  const [loadView, setLoadView] = useState(false)
+  const [darkMode,setDarkMode]=useState(true)
 
   function click(){
-    setCount(prevState=> !prevState)
+    setLoadView(prevState=> !prevState)
+  }
+  function changeMode(){
+    setDarkMode(prevState=>!prevState)
   }
 
   return (
-    <div>
-      {count===false?<Intro
+    <div className={darkMode?"dark-mode":"light-mode"}>
+      {loadView===false?<Intro
         event={click}
+        mode={changeMode}
       />:""}
-      {count?<Sidebar/>:""}
+      {loadView?<Sidebar/>:""}
     </div>
   )
 }
